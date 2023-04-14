@@ -1,0 +1,26 @@
+@startuml
+actor Пользователь
+(Авторизация) as (avtoriz)
+(Регистрация) as (regis)
+(Просмотр сотрудников) as (prom_sotr)
+(Добавление сотрудников) as (dop_sotr)
+(Удаление сотрудника) as (del_sotr)
+(Просмотр инструменкта) as (prosm_instr)
+(Удаление инструмента) as (del_instr)
+(Добавление инструмента) as (dop_instr)
+(Просмотр материала) as (prosm_mat)
+(Добавление материала) as (dop_mat)
+(Удаление материала) as (del_mat)
+Пользователь -->  avtoriz
+avtoriz --> regis
+avtoriz -->  prosm_instr
+avtoriz --> prosm_mat
+avtoriz --> prom_sotr
+prom_sotr --> dop_sotr
+prom_sotr --> del_sotr
+prosm_instr --> del_instr
+prosm_instr --> dop_instr
+prosm_mat --> dop_mat
+prosm_mat --> del_mat
+left to right direction 
+@enduml
