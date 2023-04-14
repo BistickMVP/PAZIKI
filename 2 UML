@@ -1,0 +1,16 @@
+@startuml
+node "Удалённый сервер" as node1{
+ component "БД" as node3
+ component "PHP" as node4
+ component "Страницы html" as node5
+ component "CSS" as node7
+}
+node "Компьютер пользователя(клиент)" as node2{
+ component "Браузер" as node6
+}
+node3 -> node4
+node4 --> node5
+node5 --> node7
+node5 .. node6 :Интернет
+left to right direction 
+@enduml
